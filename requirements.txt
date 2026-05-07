@@ -1,0 +1,17 @@
+streamlit
+torch
+seaborn
+statsmodels
+scikit-learn
+sqlalchemy
+pandasql
+kagglehub
+
+pandas
+matplotlib
+
+
+
+
+
+sigstore
