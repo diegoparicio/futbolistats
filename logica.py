@@ -34,18 +34,18 @@ def cargar_datos(ruta_csv):
 
 #_________________________________________________________________
 
-import kagglehub
-import pathlib
+# import kagglehub
+# import pathlib
 
 # Ruta de los archivos CSV (descargados automáticamente de Kaggle)
-liga_csv = pathlib.Path(kagglehub.dataset_download("eduardopalmieri/laliga-players-stats")) / "database.csv"
-premier_csv = pathlib.Path(kagglehub.dataset_download("eduardopalmieri/premier-league-player-stats-season-2425")) / "database.csv"
-seriea_csv = pathlib.Path(kagglehub.dataset_download("eduardopalmieri/seria-a-players-stats-season-2425")) / "database.csv"
+# liga_csv = pathlib.Path(kagglehub.dataset_download("eduardopalmieri/laliga-players-stats")) / "database.csv"
+# premier_csv = pathlib.Path(kagglehub.dataset_download("eduardopalmieri/premier-league-player-stats-season-2425")) / "database.csv"
+# seriea_csv = pathlib.Path(kagglehub.dataset_download("eduardopalmieri/seria-a-players-stats-season-2425")) / "database.csv"
 
 # Ruta de los archivos CSV (descargados manualmente de Kaggle)
-# liga_csv = 'laliga/laliga-12.csv'
-# premier_csv = 'laliga/premier-10.csv'
-# seriea_csv = 'laliga/seriea-11.csv'
+liga_csv = 'data/laliga-players-stats-season-2425.csv'
+premier_csv = 'data/premier-league-players-stats-season-2425.csv'
+seriea_csv = 'data/serie-a-players-stats-season-2425.csv'
 
 # Cargar los datos (este es un ejemplo, el CSV debe estar en la ruta indicada)
 df_laliga = cargar_datos(liga_csv)
