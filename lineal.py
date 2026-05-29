@@ -3,14 +3,26 @@
 import numpy as np
 import matplotlib.pyplot as plt
 
+import pandas as pd
+
 def visualizar_regresion_lineal(X, y, modelo_lineal, jugador, stat_a_predecir, jornadas_disputadas, jornadas_a_predecir):
     
     fig = plt.figure(figsize=(10, 5))
     plt.scatter(X, y, color='blue', label='Datos reales')
     
     # Generar puntos para la línea de predicción
-    x_pred = np.linspace(1, jornadas_disputadas + jornadas_a_predecir, jornadas_disputadas + jornadas_a_predecir)
-    y_pred = modelo_lineal.predict(x_pred.reshape(-1, 1))
+    # x_pred = np.linspace(1, jornadas_disputadas + jornadas_a_predecir, jornadas_disputadas + jornadas_a_predecir)
+    # y_pred = modelo_lineal.predict(x_pred.reshape(-1, 1))
+
+    x_pred = np.linspace(
+        1,
+        jornadas_disputadas + jornadas_a_predecir,
+        jornadas_disputadas + jornadas_a_predecir
+    )
+
+    y_pred = modelo_lineal.predict(
+        pd.DataFrame({'jornada': x_pred})
+    )
     
     plt.plot(x_pred, y_pred, color='red', label='Prediccion Regresion Lineal')
     plt.xlabel('Jornada')

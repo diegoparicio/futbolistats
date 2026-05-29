@@ -9,9 +9,4 @@ kagglehub
 
 pandas
 matplotlib
-
-
-
-
-
 sigstore
